@@ -72,7 +72,7 @@ cypress run
 {% note info %}
 Most CI providers will automatically kill background processes so you don't have to worry about cleaning up your server process once Cypress finishes.
 
-However, if you're running this script locally you'll have to do a bit more work to collect the backgrounded PID and then kill it after `cypress run`.
+However, if you're running this script locally you' have to do a bit more work to collect the backgrounded PID and then kill it after `cypress run`, or you can use the method below.
 {% endnote %}
 
 ***`start-server-and-test` module***
@@ -83,7 +83,7 @@ If the server takes a very long time to start, we recommend trying the {% url st
 npm install --save-dev start-server-and-test
 ```
 
-Pass the command to boot your server, the url your server is hosted on and your Cypress test command.
+It reads `package.json` for the command to boot your server, the URL your server is hosted on, and your Cypress test command.
 
 ```json
 {
